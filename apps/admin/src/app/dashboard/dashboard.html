@@ -1,0 +1,11 @@
+<main>
+  <h1>Dashboard</h1>
+
+  @if (authStore.user(); as user) {
+    <p>Witaj, {{ user.username }}!</p>
+  }
+
+  <button type="button" (click)="logout()">
+    Wyloguj
+  </button>
+</main>

@@ -1,0 +1,24 @@
+<main class="login-page">
+  <section class="login-card">
+    <div class="login-header">
+      <div class="brand-mark">C</div>
+      <h1>Welcome back</h1>
+      <p>Sign in to your account to continue</p>
+    </div>
+    <form [formGroup]="loginForm" class="login-form">
+      <div class="field">
+        <label for="email">Username</label>
+        <input formControlName="username" id="email" type="email" pInputText placeholder="Username" autocomplete="username"
+        />
+      </div>
+      <div class="field">
+        <div class="password-label">
+          <label for="password">Password</label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <p-password formControlName="password" inputId="password" placeholder="Enter your password" [feedback]="false" [toggleMask]="true" autocomplete="current-password" fluid />
+      </div>
+      <p-button (click)="login()" label="Sign in" styleClass="login-button" fluid [loading]="authStore.isLoading()" />
+    </form>
+  </section>
+</main>
