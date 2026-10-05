@@ -1,0 +1,36 @@
+<aside
+  class="sidebar"
+  [class.collapsed]="collapsed()"
+>
+  <div class="sidebar-header">
+    <div class="logo">
+      <i class="pi pi-th-large"></i>
+    </div>
+
+    <button
+      type="button"
+      class="collapse-button"
+      (click)="toggleSidebar()"
+      [attr.aria-label]="collapsed() ? 'Rozwiń menu' : 'Zwiń menu'"
+    >
+      <i
+        class="pi"
+        [class.pi-angle-right]="collapsed()"
+        [class.pi-angle-left]="!collapsed()"
+      ></i>
+    </button>
+  </div>
+
+  <nav class="sidebar-nav">
+    @for (item of items(); track item.route) {
+      <a
+        class="nav-item"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+      >
+        <i [class]="item.icon"></i>
+        <span>{{ item.label }}</span>
+      </a>
+    }
+  </nav>
+</aside>

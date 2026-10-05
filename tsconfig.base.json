@@ -13,7 +13,8 @@
     "target": "ES2022",
     "module": "preserve",
     "paths": {
-      "auth": ["./libs/shared/auth/src/index.ts"]
+      "auth": ["./libs/shared/auth/src/index.ts"],
+      "layout": ["./libs/shared/layout/src/index.ts"]
     },
     "rootDir": "."
   },

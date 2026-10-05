@@ -1,11 +1,46 @@
-<main>
-  <h1>Dashboard</h1>
-
-  @if (authStore.user(); as user) {
-    <p>Witaj, {{ user.username }}!</p>
-  }
-
-  <button type="button" (click)="logout()">
-    Wyloguj
-  </button>
-</main>
+<div class="dashboard-section">
+  <div class="section-header">
+    <div>
+      <h2>Dashboard</h2>
+      <span>Podsumowanie danych dla administratora aplikacji CRM</span>
+    </div>
+  </div>
+  <section class="dashboard-grid">
+    <div class="dashboard-card card">
+      <div class="card-header">
+        <h3>Ilość aktywnych użytkowników</h3>
+        <span class="card-description">Łączna liczba użytkowników w systenie.</span>
+      </div>
+      <div class="card-value">
+        7
+      </div>
+    </div>
+    <div class="dashboard-card card">
+      <div class="card-header">
+        <h3>Ilość aktywnych zadań</h3>
+        <span class="card-description">Łączna liczba aktywnych (niezakończonych) zadań w systemie.</span>
+      </div>
+      <div class="card-value">
+        100
+      </div>
+    </div>
+    <div class="dashboard-card card">
+      <div class="card-header">
+        <h3>Ilość zadań po terminie</h3>
+        <span class="card-description">Łączna liczba niezakończonych zadań w systemie.</span>
+      </div>
+      <div class="card-value">
+        259
+      </div>
+    </div>
+    <div class="dashboard-card card">
+      <div class="card-header">
+        <h3>Ilość dokumentów w bazie danych</h3>
+        <span class="card-description">Łączną ilość dokumentów wgranych do bazy danych</span>
+      </div>
+      <div class="card-value">
+        5
+      </div>
+    </div>
+  </section>
+</div>

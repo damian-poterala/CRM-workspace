@@ -1,0 +1,13 @@
+<div class="app-layout">
+  <lib-sidebar [items]="sidebarItems()"/>
+
+  <div class="app-content">
+    <lib-navbar />
+
+    <div class="page-area">
+      <main class="page-content">
+        <router-outlet />
+      </main>
+    </div>
+  </div>
+</div>

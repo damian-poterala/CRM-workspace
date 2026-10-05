@@ -1,0 +1,35 @@
+<header class="navbar">
+  <div class="navbar-left">
+
+  </div>
+
+  <div class="navbar-right">
+    <div class="navbar-user">
+      <div class="navbar-user-info">
+        <span class="navbar-username">
+          {{ user()?.username }}
+        </span>
+
+        <span class="navbar-user-label">
+          Konto użytkownika
+        </span>
+      </div>
+
+      <div class="navbar-user-icon">
+        <i class="pi pi-user"></i>
+      </div>
+    </div>
+
+    <div class="navbar-divider"></div>
+
+    <button
+      pButton
+      type="button"
+      class="navbar-logout-button"
+      (click)="logout()"
+    >
+      <i class="pi pi-sign-out"></i>
+      <span>Wyloguj</span>
+    </button>
+  </div>
+</header>
